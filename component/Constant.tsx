@@ -6,7 +6,7 @@ export const COLOR = {
     primary: '#0FA3E2',
     title: '#333',
     detail: '#00000099',
-    white: '#fff',
+    background: '#fff',
     border: "#bdbdbd",
     black: '#000000',
     lightBlack1: 'rgba(0,0,0,0.6)',
@@ -40,33 +40,24 @@ export const SIZES = {
 };
 
 export const ICON = {
-    // home: require('../assets/icon/icons8-home-50.png'),
-    // home: require('../assets/icon/home.png'),
-    // home_d: require('../assets/icon/icons8-home-50_d.png'),
-    // heart: require('../assets/icon/heart.png'),
-    // heartt: require('../assets/icon/icons8-heart-50.png'),
-    // heart_d: require('../assets/icon/icons8-heart-50_d.png'),
-    // notification: require('../assets/icon/notification.png'),
-    // notification_d: require('../assets/icon/icons8-notification-50_d.png'),
-    // user: require('../assets/icon/user-circle.png'),
-    // user_d: require('../assets/icon/icons8-user-50_d.png'),
-    // google: require('../assets/icon/google.png'),
-    // facebook: require('../assets/icon/facebook.png'),
-    // eye: require('../assets/icon/icons8-eye-50.png'),
-    // eyeClose: require('../assets/icon/icons8-closed-eye-50.png'),
-    // left: require('../assets/icon/icons8-left-50.png'),
-    // calendar: require('../assets/icon/icons8-calendar-50.png'),
-    // arrow_back: require('../assets/icon/arrow-back.png'),
-    // arrow_right: require('../assets/icon/arrow-right.png'),
-    // share: require('../assets/icon/share.png'),
-    // saved_product: require('../assets/icon/saved-product.png'),
-    // star_yellow: require('../assets/icon/star-yellow.png'),
-    // star: require('../assets/icon/icons8-star-24.png'),
-    // vote_up: require('../assets/icon/vote-up.png'),
-    // qr_code: require('../assets/icon/qr_code_FILL1_wght400_GRAD0_opsz48.png'),
-    // bus: require('../assets/icon/directions_bus_FILL1_wght400_GRAD0_opsz48.png'),
-    // clock: require('../assets/icon/schedule_FILL1_wght400_GRAD0_opsz48.png'),
-    // camera: require('../assets/icon/icons8-camera-50.png'),
+    // bottom tab
+    home: require('../assets/icon/icons8-home-24.png'),
+    home_f: require('../assets/icon/icons8-home-24_f.png'),
+    explore: require('../assets/icon/icons8-explore-24.png'),
+    explore_f: require('../assets/icon/icons8-explore-24_f.png'),
+    user: require('../assets/icon/icons8-user-24.png'),
+    user_f: require('../assets/icon/icons8-user-24_f.png'),
+
+    //home
+    clock: require('../assets/icon/icons8-time-24.png'),
+    selectedImage: require('../assets/icon/icons8-image-24.png'),
+    back: require('../assets/icon/icons8-back-24.png'),
+    favorite: require('../assets/icon/icons8-favorite-24.png'),
+    favorite_f: require('../assets/icon/icons8-favorite-24_f.png'),
+    // profile
+    editProfile: require('../assets/icon/icons8-registration-24.png'),
+    setting: require('../assets/icon/icons8-settings-25.png'),
+    changePassword: require('../assets/icon/icons8-password-reset-24.png'),
 }
 
 export const IMAGES = {
