@@ -54,7 +54,7 @@ export default function Profile(props:any) {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={() => navigation.navigate('ChangePassword')}>
           <View style={styles.rowViewItem}>
             <Text style={styles.emailText}>Đổi mật khẩu</Text>
             <Image style={styles.iconStyle} source={ICON.changePassword}/>

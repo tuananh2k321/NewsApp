@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
+  ToastAndroid,
 } from 'react-native';
 import {COLOR} from '../../component/Constant';
 import {useDispatch, useSelector} from 'react-redux';
@@ -25,18 +26,36 @@ const Register = (props: any) => {
   const disPath = useDispatch();
   const dataRegister = useSelector((state: any) => state.user.dataRegister);
 
-  useEffect(() => {
-    console.log('dataRegister: ', dataRegister);
-    if (dataRegister.result) {
-      navigation.navigate('Login');
-    }
-  }, [dataRegister]);
+  // useEffect(() => {
+  //   console.log('dataRegister: ', dataRegister);
+  //   if (dataRegister.result) {
+  //     navigation.navigate('Login');
+  //   }
+  // }, [dataRegister]);
 
   const onClickRegister = () => {
-    disPath({
-      type: 'REGISTER',
-      payload: [name, email, password],
-    });
+    console.log('onClickRegister: ', name );
+    console.log('onClickRegister: ', email );
+    console.log('onClickRegister: ', password );
+    console.log('onClickRegister: ', rePassword );
+    if (password === rePassword) {
+      disPath({
+        type: 'REGISTER',
+        payload: [name, email, password],
+      });
+      console.log('dataRegister: ', dataRegister);
+      if (dataRegister.result) {
+        navigation.navigate('Login');
+      } else {
+        ToastAndroid.show('Email đã tồn tại',
+      ToastAndroid.SHORT,)
+      }
+    } else {
+      ToastAndroid.show('Mật khẩu nhập lại không đúng',
+      ToastAndroid.SHORT, // DURATION: SHORT, LONG
+      )
+    }
+    
   };
 
   return (

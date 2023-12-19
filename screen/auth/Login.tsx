@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
+  ToastAndroid,
 } from 'react-native';
 import {COLOR} from '../../component/Constant';
 import {useDispatch, useSelector} from 'react-redux';
@@ -22,18 +23,25 @@ function Login({navigation}: {navigation: any}): JSX.Element {
   const disPath = useDispatch();
   const dataLogin = useSelector((state: any) => state.user.dataLogin);
 
-  useEffect(() => {
-    console.log('dataLogin: ', dataLogin);
-    if (dataLogin.result) {
-      navigation.navigate('BottomTab');
-    }
-  }, [dataLogin]);
+  // useEffect(() => {
+  //   console.log('dataLogin: ', dataLogin);
+  //   if (dataLogin.result) {
+  //     navigation.navigate('BottomTab');
+  //   }
+  // }, [dataLogin]);
 
   const onClickLogin = () => {
     disPath({
       type: 'LOGIN',
       payload: [email, password],
     });
+    console.log('dataLogin: ', dataLogin);
+    if (dataLogin.result) {
+      navigation.navigate('BottomTab');
+    } else {
+      ToastAndroid.show('Không đúng tài khoản hoặc mật khẩu',
+      ToastAndroid.SHORT,)
+    }
   };
 
   return (

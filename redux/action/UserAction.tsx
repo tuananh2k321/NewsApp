@@ -1,11 +1,12 @@
 import AxiosInstance from '../../component/AxiosInstance';
 
-export const register = async (email: string, password: string, name: string) => {
+export const register = async ( name: string, email: string, password: string) => {
     try {
         const res = await AxiosInstance().post("user/api/register", {
             name: name,
-            password: password,
-            email: email
+            email: email,
+            password: password
+            
         });
         return res; // Trả về toàn bộ response, bạn có thể xử lý dữ liệu sau này
     } catch (err) {

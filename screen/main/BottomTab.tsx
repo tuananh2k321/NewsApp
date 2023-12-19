@@ -38,7 +38,7 @@ const StackExplore = () => {
 const StackProfile = () => {
   return (
     <Stack.Navigator
-      initialRouteName="ChangePassword"
+      initialRouteName="Profile"
       screenOptions={{headerShown: false}}>
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="ChangePassword" component={ChangePassword} />
